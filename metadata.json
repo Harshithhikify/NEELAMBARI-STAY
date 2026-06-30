@@ -1,0 +1,6 @@
+{
+  "name": "Neelambari Stay",
+  "description": "A premium, luxurious, and peaceful nature homestay located in Madikeri, Coorg, Karnataka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-forest-50: #f4f7f5;
+  --color-forest-100: #e4ece6;
+  --color-forest-200: #c9dbcd;
+  --color-forest-300: #a2beaa;
+  --color-forest-400: #749b81;
+  --color-forest-500: #517e60;
+  --color-forest-600: #3f654c;
+  --color-forest-700: #33533e;
+  --color-forest-800: #2b4334;
+  --color-forest-900: #23372b;
+  --color-forest-950: #122018;
+
+  --color-sand-50: #fbfaf7;
+  --color-sand-100: #f4eed9;
+  --color-sand-200: #e9dbb3;
+  --color-sand-300: #dcc282;
+  --color-sand-400: #cfa356;
+  --color-sand-500: #be8437;
+  --color-sand-600: #a4672c;
+  --color-sand-700: #864e26;
+  --color-sand-800: #6d3f23;
+  --color-sand-900: #59331e;
+  --color-sand-950: #311a0f;
+}
+
+/* Custom Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-sand-50);
+  color: var(--color-forest-950);
+  overflow-x: hidden;
+}
+
+/* Custom Glassmorphism Classes */
+.glass-light {
+  background: rgba(251, 250, 247, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-dark {
+  background: rgba(18, 32, 24, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sand-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-forest-400);
+}
+
+/* Elegant selection colors */
+::selection {
+  background-color: var(--color-forest-200);
+  color: var(--color-forest-950);
+}
+
+/* Keyframe Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s infinite ease-in-out;
+}
